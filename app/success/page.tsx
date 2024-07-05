@@ -1,7 +1,7 @@
 "use client"
 import { useRouter } from 'next/navigation' 
 
-function page() { 
+function Success() { 
   const router =useRouter()
     
   return (
@@ -17,4 +17,4 @@ function page() {
   )
 }
 
-export default page
+export default Success

@@ -1,10 +1,10 @@
 import CheakOut from '@/components/CheakOut'
 import React from 'react'
 
-function page() {
+function CheakIt() {
   return (
     <CheakOut/>
   )
 }
 
-export default page
+export default CheakIt

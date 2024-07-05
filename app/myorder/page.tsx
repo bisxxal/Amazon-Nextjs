@@ -1,12 +1,11 @@
 "use client"
 import { FilterItem } from '@/components/SearchResult'
-import { useAppDispatch, useAppSelector } from '@/hooks/redux'
+import {  useAppSelector } from '@/hooks/redux'
 import {  getorder } from '@/redux/cartSlice'
 import Image from 'next/image' 
 
-function page() {
-    const order = useAppSelector(getorder)
-    const dispatch = useAppDispatch() 
+function MyOrder() {
+    const order = useAppSelector(getorder) 
   return (
     <div className='bg-white text-black min-h-screen'>
     <div className=' p-20'>
@@ -37,4 +36,4 @@ function page() {
   )
 }
 
-export default page
+export default MyOrder

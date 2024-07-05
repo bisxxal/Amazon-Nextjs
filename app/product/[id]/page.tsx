@@ -5,24 +5,23 @@ import { useSupabase } from '@/hooks/useSupabase'
 import { useParams } from 'next/navigation'
 import React, { useEffect } from 'react'
 
-function page() {
+function Product() {
     const {id} = useParams()
     const {singleProdct ,getSingleProduct} =useSupabase()
 
     useEffect(()=>{
       getSingleProduct(Number(id))
-    },[])
-    // console.log(singleProdct);
+    },[getSingleProduct ,id]) 
     
   return (
    <div>
      {
       singleProdct.map((item:FilterItem)=>(
-        <SingleProduct data={item} />
+        <SingleProduct key={item.id} data={item} />
       ))
     }
    </div>
   )
 }
 
-export default page
+export default Product

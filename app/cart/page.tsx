@@ -8,7 +8,7 @@ import React from 'react'
 
 
 
-function page() {
+function Cart() {
   const dispatch = useAppDispatch()
   const router = useRouter()
   const cart =useAppSelector(getCart)
@@ -26,7 +26,7 @@ function page() {
           <div className=' flex justify-between items-center text-sm mb-3 '>  <h1 className=' text-4xl'>Shopping Cart</h1> <h2>Price</h2></div>
 
         { cart ?.map((item:FilterItem)=>(
-            <div className=' flex w-full pl-10 justify-between h-[240px] border-t-[1px] border-zinc-400 py-2 '>
+            <div key={item.id} className=' flex w-full pl-10 justify-between h-[240px] border-t-[1px] border-zinc-400 py-2 '>
           <div className='   flex'>
             <div className=' w-36'>
                 <Image className=' w-full h-full object-' src={item.image} height={100} width={150} alt='' />
@@ -63,4 +63,4 @@ function page() {
   )
 }
 
-export default page
+export default Cart

@@ -39,7 +39,7 @@ import ProductCard from '@/components/ProductCard'
           {
             filter && filter?.map((item:FilterItem ,index:number)=>{
               return(
-               <ProductCard data={item}/>
+               <ProductCard key={item.id} data={item}/>
               )
             })
           }

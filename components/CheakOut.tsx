@@ -69,7 +69,7 @@ function CheakOut() {
           {/* //cart page */}
             <div>
             { cart ?.map((item:FilterItem)=>(
-            <div className=' flex w-full justify-between h-[100px] border-t-[1px] border-zinc-200 py-2 mt-5 px-10 '>
+            <div key={item.id} className=' flex w-full justify-between h-[100px] border-t-[1px] border-zinc-200 py-2 mt-5 px-10 '>
           <div className='   flex'>
             <div className=' w-24'>
                 <Image className=' w-full h-full object-' src={item.image} height={100} width={150} alt='' />

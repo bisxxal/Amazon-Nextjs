@@ -1,8 +1,8 @@
 import SignIn from "@/components/SignIn"
-function page() {
+function SignPop() {
   return (
      <SignIn/>
   )
 }
 
-export default page
+export default SignPop

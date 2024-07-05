@@ -4,13 +4,13 @@ import { useSupabase } from '@/hooks/useSupabase'
 import { useParams } from 'next/navigation'
 import React, { useEffect } from 'react'
  
-function page() {
+function Search() {
     const {quary} = useParams()
      const  {filterDataFormSupabase ,filter} =useSupabase()
 
      useEffect(()=>{
       filterDataFormSupabase(quary.toString())
-     },[quary])
+     },[quary ,filterDataFormSupabase])
  
   return (
     <div>
@@ -19,4 +19,4 @@ function page() {
   )
 }
 
-export default page 
+export default Search 

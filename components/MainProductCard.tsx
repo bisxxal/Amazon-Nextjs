@@ -11,12 +11,12 @@ const router = useRouter()
   useEffect(()=>{
     getdataFormSupabase()
     
-  },[]) 
+  },[getdataFormSupabase]) 
   return (
     <div className=' bg-[#E3E6E6] text-black py-20 px-10 min-h-screen '>
         <div>
  
-  <h1 className='px-5 py-4 font-semibold text-lg bg-[white]'>Up to 30% off | men's clothing products curated from stores nearby</h1>
+  <h1 className='px-5 py-4 font-semibold text-lg bg-[white]'>Up to 30% off | men s clothing products curated from stores nearby</h1>
         <div className='px-5 py-4 flex w-full justify-between h-[300px] bg-[white] mb-10'>
         {
             products?.map((item:FilterItem)=>{
@@ -24,7 +24,7 @@ const router = useRouter()
               { 
                   return(
                       
-                      <Image className='cursor-pointer object-contain' onClick={()=> router.push(`/product/${item.id}`)}  src={item.image} height={400} width={250} alt='' /> 
+                      <Image key={item.id} className='cursor-pointer object-contain' onClick={()=> router.push(`/product/${item.id}`)}  src={item.image} height={400} width={250} alt='' /> 
                 )
               } 
           })
@@ -39,7 +39,7 @@ const router = useRouter()
               {
                   return(
                       
-                      <Image className='cursor-pointer object-contain'  onClick={()=> router.push(`/product/${item.id}`)} src={item.image} height={300} width={200} alt='' /> 
+                      <Image key={item.id} className='cursor-pointer object-contain'  onClick={()=> router.push(`/product/${item.id}`)} src={item.image} height={300} width={200} alt='' /> 
                 )
               } 
           })
@@ -54,7 +54,7 @@ const router = useRouter()
               {
                   return(
                       
-                      <Image className='cursor-pointer object-contain' onClick={()=> router.push(`/product/${item.id}`)}  src={item.image} height={300} width={200} alt='' /> 
+                      <Image key={item.id} className='cursor-pointer object-contain' onClick={()=> router.push(`/product/${item.id}`)}  src={item.image} height={300} width={200} alt='' /> 
                 )
               } 
           })
